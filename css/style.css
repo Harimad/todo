@@ -1,0 +1,148 @@
+.hidden {
+  display: none;
+}
+
+.background {
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-cover {
+  margin: 0 auto;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Courier New", Courier, monospace;
+}
+
+ul {
+  list-style: none;
+}
+button {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+input[type="text"] {
+  width: 200px;
+  height: 25px;
+  color: white;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+}
+input[type="text"]:focus {
+  border-bottom: 1px solid palegreen;
+}
+input::placeholder {
+  color: whitesmoke;
+}
+
+#login-form {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  font-size: 15px;
+  color: whitesmoke;
+  opacity: 70%;
+}
+
+#greeting {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  font-size: 30px;
+  color: whitesmoke;
+  opacity: 80%;
+}
+
+#clock {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  font-size: 90px;
+  color: whitesmoke;
+  opacity: 60%;
+}
+
+#todo-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  font-size: 15px;
+  color: whitesmoke;
+  opacity: 90%;
+}
+
+#todo-list {
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  width: 150px;
+  font-size: 20px;
+  color: white;
+  opacity: 90%;
+}
+#todo-list li {
+  display: flex;
+  justify-content: space-around;
+}
+
+.todo-element,
+.todo-button {
+  display: inline-block;
+}
+
+#quote {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  font-size: 14px;
+  color: whitesmoke;
+  opacity: 70%;
+}
+
+#weather {
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  font-size: 15px;
+  color: whitesmoke;
+  opacity: 80%;
+}
