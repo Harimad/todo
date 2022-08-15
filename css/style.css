@@ -55,7 +55,7 @@ input::placeholder {
 
 #login-form {
   position: absolute;
-  top: 40%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -67,7 +67,7 @@ input::placeholder {
 
 #greeting {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -79,7 +79,7 @@ input::placeholder {
 
 #clock {
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -91,7 +91,7 @@ input::placeholder {
 
 #todo-form {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -103,13 +103,13 @@ input::placeholder {
 
 #todo-list {
   position: absolute;
-  top: 70%;
-  left: 50%;
+  top: 58%;
+  left: 45%;
   transform: translate(-50%, -50%);
   z-index: 2;
   text-align: center;
   max-width: 1000px;
-  max-height: 200px;
+  max-height: 230px;
   font-size: 20px;
   color: white;
   opacity: 90%;
@@ -127,7 +127,7 @@ input::placeholder {
 
 #quote {
   position: absolute;
-  top: 90%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;

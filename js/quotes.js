@@ -1,57 +1,26 @@
-const quotes = [
-  {
-    quote: "The way to get started is to quit talking and begin doing.",
-    author: "Walt Disney",
-  },
-  {
-    quote: "Life is what happens when you're busy making other plans.",
-    author: "John Lennon",
-  },
-  {
-    quote:
-      "The world is a book and those who do not travel read only one page.",
-    author: "Saint Augustine",
-  },
-  {
-    quote: "Life is either a daring adventure or nothing at all.",
-    author: "Helen Keller",
-  },
-  {
-    quote: "To Travel is to Live",
-    author: "Hans Christian Andersen",
-  },
-  {
-    quote: "Only a life lived for others is a life worthwhile.",
-    author: "Albert Einstein",
-  },
-  {
-    quote: "You only live once, but if you do it right, once is enough.",
-    author: "Mae West",
-  },
-  {
-    quote: "Never go on trips with anyone you do not love.",
-    author: "Hemmingway",
-  },
-  {
-    quote: "We wander for distraction, but we travel for fulfilment.",
-    author: "Hilaire Belloc",
-  },
-  {
-    quote: "Travel expands the mind and fills the gap.",
-    author: "Sheda Savage",
-  },
-];
+let apiQuotes = [];
 
-function quoteGenerator() {
-	const $quote = document.querySelector('#quote span:first-child');
-	const $author = document.querySelector('#quote span:last-child');
+function newQuote() {
+  const $quote = document.querySelector('#quote span:first-child');
+  const $author = document.querySelector('#quote span:last-child');
 
-	const todayQuoteObj = quotes[Math.floor(Math.random() * quotes.length)];
+  const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
+  if (!quote.author) $author.innerText = `- Unknwon`;
+  else $author.innerText = `- ${quote.author}`;
 
-	$quote.innerText = todayQuoteObj.quote;
-	$author.innerText = todayQuoteObj.author;
+  $quote.textContent = `"${quote.text}"`;
 }
 
-quoteGenerator();
-setInterval(quoteGenerator, 10000);
+async function getQuotes() {
+  const apiUrl = 'https://type.fit/api/quotes';
+  try {
+    const res = await fetch(apiUrl);
+    apiQuotes = await res.json();
+    newQuote();
+  } catch (error) {
+    console.log(error);
+  }
+}
 
+getQuotes();
+setInterval(quoteGenerator, 20000);
